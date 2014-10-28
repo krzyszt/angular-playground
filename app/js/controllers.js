@@ -14,4 +14,14 @@ angular.module('playNg.controllers', [])
         $scope.deleteSomeStuff = function(){
            alert('Deleting some stuff!');
         };
+  }])
+  .controller('SimpleHttpCtrl', ['$scope', '$http', function($scope, $http){
+        
+        var futureResponse = $http.get('/simple-http');
+        
+        futureResponse.success(function(data, status, headers, config){
+           $scope.data = data;
+        });
+        
+        
   }]);

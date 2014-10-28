@@ -3,7 +3,9 @@
 /* Services */
 
 
-// Demonstrate how to register services
-// In this case it is a simple value service.
-angular.module('playNg.services', []).
-  value('version', '0.1');
+var playNg = angular.module('playNg.services', []);
+
+
+playNg.factory('Post', function($resource){
+   return $resource("api/posts/:id");
+});

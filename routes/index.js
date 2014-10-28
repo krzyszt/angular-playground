@@ -7,3 +7,8 @@ router.get('/', function(req, res) {
 });
 
 module.exports = router;
+
+module.exports.simple_http = function(req,res){
+   
+  res.json({msg: 'Simple Http response'}); 
+};

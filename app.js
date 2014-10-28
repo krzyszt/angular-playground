@@ -22,6 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'app')));
 
 app.use('/', routes);
+app.use('/simple-http', routes.simple_http);
 //app.use('/users', users);
 
 /// catch 404 and forward to error handler
